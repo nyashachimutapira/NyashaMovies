@@ -328,3 +328,4 @@ C:\Users\Bishop Nyasha\Desktop\Projects\NyashaMovies\NyashaMovies\NyashaMovies\b
 C:\Users\Bishop Nyasha\Desktop\Projects\NyashaMovies\NyashaMovies\NyashaMovies\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Bishop Nyasha\Desktop\Projects\NyashaMovies\NyashaMovies\NyashaMovies\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Bishop Nyasha\Desktop\Projects\NyashaMovies\NyashaMovies\NyashaMovies\obj\Debug\net10.0\compressed\gc625338ye-{0}-nrcqjk9w76-nrcqjk9w76.gz
+C:\Users\Bishop Nyasha\Desktop\Projects\NyashaMovies\NyashaMovies\NyashaMovies\obj\Debug\net10.0\NyashaMovies.sourcelink.json
