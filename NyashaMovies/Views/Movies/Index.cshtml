@@ -1,0 +1,96 @@
+@model IEnumerable<NyashaMovies.Models.Movie>
+
+@{
+    ViewData["Title"] = "My Movies";
+}
+
+<div class="container">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
+
+    <form asp-action="Index" method="get" class="search-form">
+        <div class="form-group">
+            <label for="searchString">Search by Title:</label>
+            <input type="text" name="searchString" id="searchString" value="@ViewData["searchString"]" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="yearFilter">Filter by Year or Newer:</label>
+            <select name="yearFilter" id="yearFilter" class="form-control">
+                <option value="">-- All Years --</option>
+                @for (int year = 2024; year >= 1990; year--)
+                {
+                    <option value="@year" selected="@((int?)ViewData["yearFilter"] == year)">@year and newer</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-secondary">Filter</button>
+    </form>
+
+    @if (Model.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReleaseDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Genre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rating)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Year)
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReleaseDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Genre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rating)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Year)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No movies found.</p>
+    }
+</div>
