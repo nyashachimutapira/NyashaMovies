@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NyashaMovies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35cdb3c1028f4253de75f06b5dfa02cdd913a690")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3ce99b49de53c5b01b1c3442e87e600c7ab9cbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("NyashaMovies")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NyashaMovies")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
